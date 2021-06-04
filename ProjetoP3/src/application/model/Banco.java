@@ -2,10 +2,6 @@ package application.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import application.model.Conta;
-import application.model.Poupanca;
-
-
 
 /**
  *

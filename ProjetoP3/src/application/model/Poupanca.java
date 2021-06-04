@@ -1,7 +1,5 @@
 package application.model;
 
-import application.model.Conta;
-
 /**
  *
  * @author Mário Filipe

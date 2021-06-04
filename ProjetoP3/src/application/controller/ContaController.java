@@ -37,7 +37,6 @@ public class ContaController {
             conta.setSaldo(saldo);
             return true;
         }
-        System.out.println("Saldo insuficiente.");
         return false;
     }
     
@@ -52,7 +51,6 @@ public class ContaController {
             conta.setSaldo(saldo);
             return true;
         }
-        System.out.println("Ações insuficientes.");
         return false;
     }
     

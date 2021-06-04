@@ -294,7 +294,7 @@ public class Main {
                     boolean existePoup = bankControl.verificarContaP(idRende);
                     if (existePoup == true) {
                         bankControl.renderConta(idRende);
-                        System.out.println("Rendimento de 1% para o saldo da conta poupança " + idRende);
+                        System.out.println("Rendimento de 1% para o saldo da conta poupança " + idRende + ".");
                     }
                     else {
                         System.out.println("Conta inexistente.");
@@ -307,7 +307,7 @@ public class Main {
                     int opComp = in.nextInt();
                     boolean existeAC = bankControl.verificarConta(opComp);
                     if (existeAC == true) {
-                        System.out.println("Quantas ações deseja comprar? (1 x R$100,00");
+                        System.out.println("Quantas ações deseja comprar? (1 x R$100,00)");
                         int compra = in.nextInt();
                         boolean compSucesso = bankControl.comprarAcoes(opComp, compra);
                         if (compSucesso == true) {

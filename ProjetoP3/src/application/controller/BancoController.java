@@ -3,6 +3,7 @@ package application.controller;
 import application.model.Banco;
 import application.model.Conta;
 import application.model.Poupanca;
+import java.util.Iterator;
 
 /**
  *
@@ -17,12 +18,11 @@ public class BancoController {
         if (!unicap.getContas().isEmpty()) {
             for (int i = 0; i < unicap.getContas().size(); i++) {
                 if (unicap.getContas().get(i).getId() == conta.getId()) {
-                    unicap.getContas().add(conta);
-                    return true;
+                    return false;
                 }
-            
             }
-            return false;
+            unicap.getContas().add(conta);
+            return true;
         }
         else {
             unicap.getContas().add(conta);
@@ -32,13 +32,13 @@ public class BancoController {
     
     public boolean criarContaP(Poupanca poupanca) {
         if (!unicap.getPoupancas().isEmpty()) {
-        for (int i = 0; i < unicap.getPoupancas().size(); i++) {
-            if (unicap.getPoupancas().get(i).getId() == poupanca.getId()) {
-                unicap.getPoupancas().add(poupanca);
-                return true;
+            for (int i = 0; i < unicap.getPoupancas().size(); i++) {
+                if (unicap.getPoupancas().get(i).getId() == poupanca.getId()) {
+                    return false;
+                }
             }
-        }
-        return false;
+            unicap.getPoupancas().add(poupanca);
+            return true;
         }
         else {
             unicap.getPoupancas().add(poupanca);
@@ -206,6 +206,31 @@ public class BancoController {
                 System.out.println();
                 break;
             }
+        }
+    }
+
+    public void listarContas() {
+        Conta c;
+        Iterator<Conta> it;
+        it = unicap.getContas().iterator();
+        while(it.hasNext()) {
+            c = it.next();
+            System.out.println("Conta Corrente " + c.getId());
+            System.out.println("Saldo: R$" + c.getSaldo());
+            System.out.println("Ações: " + c.getAcoes());
+            System.out.println();
+        }
+    }
+
+    public void listarPoupancas() {
+        Poupanca p;
+        Iterator<Poupanca> it = unicap.getPoupancas().iterator();
+        it = unicap.getPoupancas().iterator();
+        while(it.hasNext()) {
+            p = it.next();
+            System.out.println("Conta Poupanca " + p.getId());
+            System.out.println("Saldo: R$" + p.getSaldo());
+            System.out.println();
         }
     }
     

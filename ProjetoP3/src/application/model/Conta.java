@@ -10,15 +10,16 @@ public class Conta {
     public float saldo;
     private int acoes;
     
-    public Conta() {
-    }
-    
     public Conta(int id) {
         this.id = id;
         this.saldo = 0f;
         this.acoes = 0;
     }
-    
+
+    public Conta() {
+
+    }
+
     public void setSaldo(float novoSaldo) {
         saldo = novoSaldo;
     }

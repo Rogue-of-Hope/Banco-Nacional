@@ -6,9 +6,12 @@ package application.model;
  */
 
 public class Poupanca extends Conta {
-    
+
     public Poupanca(int id) {
-        super();
+        this.id = id;
+        this.saldo = 0f;
     }
-    
+
+
+
 }
